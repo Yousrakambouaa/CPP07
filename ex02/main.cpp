@@ -6,7 +6,20 @@
 /*   By: ykamboua <ykamboua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 19:26:22 by ykamboua          #+#    #+#             */
-/*   Updated: 2025/10/19 19:26:23 by ykamboua         ###   ########.fr       */
+/*   Updated: 2025/10/20 21:20:08 by ykamboua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#include "Array.hpp"
+#include <iostream>
+int main()
+{
+	Array<int> obj(7);
+	
+	obj[0] = 99;
+	obj[1] = 993;
+	obj[2] = 994;
+
+	std::cout << obj[0] << std::endl;
+}
