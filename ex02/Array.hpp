@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykamboua <ykamboua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 00:31:58 by ykamboua          #+#    #+#             */
-/*   Updated: 2025/10/19 19:23:44 by ykamboua         ###   ########.fr       */
+/*   Created: 2025/10/19 19:26:26 by ykamboua          #+#    #+#             */
+/*   Updated: 2025/10/20 18:44:54 by ykamboua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <iostream>
-#include "iter.hpp"
-
-void addElements(int &arrElment)
+template<typename T>
+class Array
 {
-	arrElment = arrElment + 1;
-}
+	private:
+		unsigned int _size;
+		T * _arr;
+	public:
+		Array();
+		Array(unsigned int n);
+		Array(Array& other);
+		Array& operator=(Array& other);
+		~Array();
+};
 
 
-void printElements(int &arrElment)
-{
-	std::cout << arrElment << std::endl;
-}
-
-int main()
-{
-	int arr[7];
-
-    std::cout << "-------------: " << std::endl;
-	iter(arr, 7, printElements);
-	iter(arr, 7, addElements);
-    std::cout << "-------------: " << std::endl;
-	iter(arr, 7, printElements);
-
-}
- 

@@ -5,35 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykamboua <ykamboua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 00:31:58 by ykamboua          #+#    #+#             */
-/*   Updated: 2025/10/19 19:23:44 by ykamboua         ###   ########.fr       */
+/*   Created: 2025/10/19 19:26:22 by ykamboua          #+#    #+#             */
+/*   Updated: 2025/10/19 19:26:23 by ykamboua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <iostream>
-#include "iter.hpp"
-
-void addElements(int &arrElment)
-{
-	arrElment = arrElment + 1;
-}
-
-
-void printElements(int &arrElment)
-{
-	std::cout << arrElment << std::endl;
-}
-
-int main()
-{
-	int arr[7];
-
-    std::cout << "-------------: " << std::endl;
-	iter(arr, 7, printElements);
-	iter(arr, 7, addElements);
-    std::cout << "-------------: " << std::endl;
-	iter(arr, 7, printElements);
-
-}
- 
